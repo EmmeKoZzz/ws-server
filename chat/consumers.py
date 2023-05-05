@@ -3,10 +3,10 @@ from channels.generic.websocket import WebsocketConsumer
 
 class ChatConsumer(WebsocketConsumer):
     def connect(self):
-        roomName = self.scope["url_route"]["kwargs"]
+        roomName = self.scope["path_remaining"]
+        print(self.scope)
         self.accept();
         self.send(text_data=json.dumps({
             'type':'connected',
-            'msessage': 'well done!',
-            'room': roomName
+            'message': 'well done!',
         }))
