@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head><title>WS_Server</title></head>
+	<body>
+		Testing... look at your browser console.
+	</body>
+	<script  type="text/javascript">
+		const url = `ws://${window.location.host}/chat/ROOM`
+		
+		const ws = new WebSocket(url);
+
+		ws.onmessage = (e) => {
+			let data = JSON.parse(e.data)
+			console.log('Data: ', data)
+		}
+
+	</script>
+</html>

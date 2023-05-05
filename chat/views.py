@@ -1,4 +1,5 @@
 from django.shortcuts import render
 
-def chat(request):
-    return render(request, 'home.html')
+# Create your views here.
+def testing(request):
+    return render(request, 'Test.html')
