@@ -8,5 +8,5 @@ class ChatConsumer(WebsocketConsumer):
         self.accept();
         self.send(text_data=json.dumps({
             'type':'connected',
-            'message': 'well done!',
+            'payload': 'Successful Conection.',
         }))
